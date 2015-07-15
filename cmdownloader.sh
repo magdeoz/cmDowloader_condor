@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-ADB=$(adb shell grep -o ${cm-12.1}'-........-NIGHTLY-'${condor} /system/build.prop | head -n1) #Reads the currently installed CM-version from your device's /system/build.prop. 
+ADB=$(adb shell grep -o ${cm-12.1}'-........-NIGHTLY-'${falcon} /system/build.prop | head -n1) #Reads the currently installed CM-version from your device's /system/build.prop. 
 
 CURL=$(curl -s 'https://download.cyanogenmod.org/?device='${falcon} | grep -o ${cm-12.1}'-........-NIGHTLY-'${falcon} | head -n1 | grep ${cm-12.1}'-........-NIGHTLY-'${falcon} ) #Searches the CyanogenMod-website of your device for the latest update.
 
