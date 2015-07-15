@@ -3,11 +3,11 @@
 
 ADB=$(adb shell grep -o ${cm-12.1}'-........-NIGHTLY-'${condor} /system/build.prop | head -n1) #Reads the currently installed CM-version from your device's /system/build.prop. 
 
-CURL=$(curl -s 'https://download.cyanogenmod.org/?device='${condor} | grep -o ${cm-12.1}'-........-NIGHTLY-'${condor} | head -n1 | grep ${cm-12.1}'-........-NIGHTLY-'${condor} ) #Searches the CyanogenMod-website of your device for the latest update.
+CURL=$(curl -s 'https://download.cyanogenmod.org/?device='${falcon} | grep -o ${cm-12.1}'-........-NIGHTLY-'${falcon} | head -n1 | grep ${cm-12.1}'-........-NIGHTLY-'${falcon} ) #Searches the CyanogenMod-website of your device for the latest update.
 
-MD5=$(curl -s 'https://download.cyanogenmod.org/?device='${condor} | grep -o 'md5sum: ................................' | cut -c 8-40 | head -n1) #Gets the md5-hash for the latest update
+MD5=$(curl -s 'https://download.cyanogenmod.org/?device='${falcon} | grep -o 'md5sum: ................................' | cut -c 8-40 | head -n1) #Gets the md5-hash for the latest update
 
-WGETURL=$(curl -s 'https://download.cyanogenmod.org/?device='${condor} | grep -v 'jen' | grep -o -m1 'http://get.cm/get/...' | head -n1) #Selects the most recent direct-link to the CyanogenMod-zip
+WGETURL=$(curl -s 'https://download.cyanogenmod.org/?device='${falcon} | grep -v 'jen' | grep -o -m1 'http://get.cm/get/...' | head -n1) #Selects the most recent direct-link to the CyanogenMod-zip
 
 
 
